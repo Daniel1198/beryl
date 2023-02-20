@@ -1,5 +1,7 @@
+import 'package:beryl/screens/appointment.dart';
 import 'package:beryl/screens/home.dart';
 import 'package:beryl/screens/login.dart';
+import 'package:beryl/screens/register.dart';
 import 'package:beryl/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '': (context) => const HomeScreen(),
         'login': (context) => const LoginScreen(),
+        'register': (context) => const RegisterScreen(),
+        'appointment': (context) => const AppointmentScreen(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,

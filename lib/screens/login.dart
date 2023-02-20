@@ -13,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool isValidId = false;
-  bool isVisible = false;
+  bool isVisible = true;
   bool register = false;
   @override
   Widget build(BuildContext context) {
@@ -82,6 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               SizedBox(height: 20),
                               TextFormField(
                                 decoration: InputDecoration(
+                                    border: OutlineInputBorder(),
                                     hintText: 'Ex: 5675KP',
                                     suffixIcon: Icon(CupertinoIcons.keyboard)),
                               ),
@@ -111,7 +112,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               SizedBox(height: 10),
                               MaterialButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pushReplacementNamed("register");
+                                },
                                 padding: EdgeInsets.all(20),
                                 shape: RoundedRectangleBorder(
                                     side: BorderSide(),
@@ -139,6 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               TextFormField(
                                 obscureText: isVisible,
                                 decoration: InputDecoration(
+                                    border: OutlineInputBorder(),
                                     hintText: '*********',
                                     suffixIcon: GestureDetector(
                                         onTap: () {

@@ -91,30 +91,35 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisSpacing: 10,
                           crossAxisSpacing: 10),
                       children: [
-                        Container(
-                          padding: EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromARGB(33, 18, 57, 88)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Image(
-                                image:
-                                    AssetImage('assets/images/rendez-vous.png'),
-                                width: 50,
-                              ),
-                              Text(
-                                'PRISE DE RENDEZ-VOUS',
-                                maxLines: 2,
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.inter(
-                                    fontWeight: FontWeight.bold,
-                                    textStyle: TextStyle(
-                                        overflow: TextOverflow.ellipsis),
-                                    color: primaryColor),
-                              )
-                            ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed("appointment");
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(20),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color.fromARGB(33, 18, 57, 88)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image(
+                                  image: AssetImage(
+                                      'assets/images/rendez-vous.png'),
+                                  width: 50,
+                                ),
+                                Text(
+                                  'PRISE DE RENDEZ-VOUS',
+                                  maxLines: 2,
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.inter(
+                                      fontWeight: FontWeight.bold,
+                                      textStyle: TextStyle(
+                                          overflow: TextOverflow.ellipsis),
+                                      color: primaryColor),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         Container(
